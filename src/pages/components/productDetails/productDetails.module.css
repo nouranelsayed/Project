@@ -1,0 +1,452 @@
+
+.CardDetailscontainer {  display: grid;
+    grid-template-columns: 3fr 2fr 1.3fr;
+    grid-template-rows: 1fr;
+    gap: 10px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . .";
+  }
+  
+
+  .imgproduct{
+    width: 100%;
+  }
+
+
+  .productImage{
+    align-items: center;
+    position: relative;
+  }
+
+
+  .productimgIcon{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:42px;
+    left:0px;
+  }
+
+.productGallery{
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.imgInGallery{
+    max-width: 79px;
+
+}
+
+.imgInGallery img{
+transition: 0.2s ease-in-out;
+}
+.imgInGallery:hover img{
+
+transform: scale(1.1);
+}
+
+
+.productNaame{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.rateBadge{
+    background-color: rgb(6,58,136);
+    color: white;
+padding: 4px 2px;
+    border-radius: 4px;
+    margin-right:5px ;
+}
+
+.soldNum{
+    color: #575757;
+    margin-left: 5px;
+}
+
+
+.stockIcon{
+    margin-right: 20px;
+}
+
+.storeIcon , .guranteedIcon , .deleiveryIcon{
+    color: rgb(6,58,136);
+}
+
+
+.color-chooseUl{
+list-style-type: none;
+display: flex;
+padding: 0 0 ;
+    flex-wrap: wrap;
+    align-items: center;
+   
+}
+.colorItemInfo{
+    color: #ffffff;
+font-family: "muli";
+font-weight: 500;
+font-size: 11px;
+
+}
+
+
+.colorItemInfo input[type="radio"] {
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* Standard syntax */
+
+
+  }
+  
+  /* Custom styles for  radio button */
+  .colorItemInfo .blackInfo::before {
+    display: inline-block;
+     margin-left: 15px;
+content: "";
+width: 25px;
+height: 25px;
+background-color: rgb(7, 7, 7);
+border-radius: 50%;
+border: 2px solid rgba(193, 193, 193, 0.434);
+    /* Add other styles as needed */
+  }
+
+   /* Custom styles for  radio button */
+   .colorItemInfo .grayInfo::before {
+    display: inline-block;
+     margin-left: 15px;
+content: "";
+width: 25px;
+height: 25px;
+background-color: rgb(71, 71, 71);
+    border-radius: 50%;
+    border: 2px solid rgba(193, 193, 193, 0.337);
+  }
+
+  .colorCheckContainer{
+    position: relative;
+  }
+  .colorCheck{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    top: 1px;
+    right: 0px;
+
+}
+
+  .colorCheck i{
+    font-size: 27px;}
+    
+  .detailName{
+    text-decoration: dotted;
+    color: #575757;
+  }
+
+  #dots{
+    opacity: 0;
+  }
+ 
+  #more{
+    display: none;
+  }
+
+  #myBtn{
+border: none;
+text-decoration: underline;
+color: #27136e;
+background-color: white;
+  }
+
+  .InfoTable{
+    max-width:282px ;
+  }
+ 
+.infoValue{
+    list-style: none;
+    color: rgb(10, 10, 10);
+    font-weight: 600;
+}
+
+
+
+/* payment Card */
+
+.paymentCard {
+    margin-top: 40px;
+    height: fit-content;
+    padding: 15px 25px;
+    box-shadow: 1px 1px 10px -7px rgba(0, 0, 0, 0.79);
+    border-radius: 4px;
+}
+.salary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lastPrice {
+    font-size: 14px;
+    color: gray;
+}
+
+.payNow{
+    margin-bottom: 10px;
+}
+
+.installment{
+    padding: 0;
+    margin: 0;
+}
+
+.paymentsTxt {
+    color: rgb(68, 68, 68);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-content: center;
+    flex-wrap: wrap;
+    font-weight: 300;
+}
+.payNow{
+    color: #0d0d0d;
+  margin: 15px 0px;
+}
+
+.period{
+    background-color: #fbfbfb;
+    margin: 15px 0px;
+    border: 1px solid rgb(196, 196, 196);
+    padding: 18px 5px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.months{
+    font-size: 14px;
+    color: #575757;
+}
+
+.period:hover{
+    border: 1px solid rgb(54, 23, 231);
+}
+
+
+.intallmentsCardcontainer {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr;
+  grid-template-rows: 1fr;
+  gap: 5px 11px;
+  grid-auto-flow: row;
+  grid-template-areas: ". . . .";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Media screen */
+/* For screens equal to or less than 1210px */
+
+@media only screen and (max-width: 1050px) {
+    .productDetailsInfo {
+        grid-row: 2;
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .badges {
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width: 1210px) {
+    .CardDetailscontainer {
+      display: grid;
+      grid-template-columns: auto auto; /* Two columns */
+      grid-template-rows: auto auto; /* Two rows */
+      gap: 20px; /* Adjust the gap as needed */
+      justify-content: center; /* Center the grid horizontally */
+    }
+  
+    .productImage {
+      grid-row: 1; /* Place product image in the first row */
+      grid-column: 1; /* Place product image in the first column */
+    }
+  
+    .paymentCard {
+      grid-row: 1; /* Place payment card in the first row */
+      grid-column: 2; /* Place payment card in the second column */
+    }
+  
+    .productDetailsInfo {
+      grid-row: 2; /* Place product details info in the second row */
+      grid-column: 1 / span 2; /* Span across both columns */
+    }
+  }
+  
+  /* For screens equal to or less than 1050px */
+  @media only screen and (max-width: 1050px) {
+    .CardDetailscontainer {
+      grid-template-columns: auto; /* One column */
+      grid-template-rows: auto auto auto; /* Three rows */
+    }
+  
+    .productImage {
+      grid-row: 1; /* Place product image in the first row */
+      grid-column: 1; /* Place product image in the first column */
+    }
+  
+    .productDetailsInfo {
+      grid-row: 2; /* Place product details info in the second row */
+      grid-column: 1; /* Place product details info in the first column */
+    }
+  
+    .paymentCard {
+      grid-row: 3; /* Place payment card in the third row */
+      grid-column: 1; /* Place payment card in the first column */
+    }
+  }
+
+  /* table Details */
+
+  .tableHead{
+    text-decoration: none;
+    color: #575757;
+  
+  }
+
+.detailName{
+  color: #575757;
+  font-size: 15px; 
+  padding-right: 50px;
+}
+
+/* #techincalTable{
+  border-bottom: none;
+} */
+
+.table>:not(caption)>*>* {
+  border-bottom: none;
+}
+
+.firstRow td{
+  width: 400px;
+}
+
+
+.tableName{
+  font-size: 18px;
+  border-radius: 4px;
+  color: #232323;
+}
+
+tbody, td, tfoot, th, thead{
+  border-color: none; 
+  border-width: 0;
+}
+.firstRow {
+  border-style: none;
+  border-bottom: solid #bfbcbc;
+  border-width: 1px;
+
+}
+
+.tech{
+position: relative;
+}
+
+.tech::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 132px;
+  height: 1px;
+  background-color: #0d53ba;
+}
+
+
+
+
+/* similar products */
+
+ 
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  background: rgba(179, 179, 179, 0.692);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: white;
+  font-size: 27px;
+  border: none;
+  padding-bottom: 8px;
+  display: flex;
+  font: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.owl-carousel .owl-nav button.owl-prev {
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: -5%;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  right: -3%;
+  }
+  
+
+.owl-dot{
+  display: none;
+}
+
+textarea.commentsText{
+
+  border: 1px solid #bfbebe;
+  background-color: #f4f4f4;
+}
+
+
+
+
+.commentsText:focus {
+  outline: none;
+  border: 1px solid #888888;
+}
+
+.product-reviews-bar .reviewsBarList {
+  list-style: none; /* Remove default list style */
+  padding: 0px;
+  margin: 0px;
+}
+
+.progress, .progress-stacked {
+  height: 5px;
+}
+
+span.progressBarName{
+  font-size: 13px;
+}
+
+
+
+
+
+
+
